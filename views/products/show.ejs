@@ -1,0 +1,42 @@
+<%- include ('../partials/header') %>
+
+
+  <!-- Add in your own product display -->
+  <div class="container my-5">
+    <header>
+      <a href="#"><%= product.name %></a>
+      <br>
+      <small>
+        <%= (product.updatedAt.toLocaleString("en-CA")) %>
+      </small>
+    </header>
+    <hr>
+    <div class="content">
+      <a href="#">Here is some information of: <%= product.name %></a>
+      <%- product.description %>
+    </div>
+    <hr>
+    <div class="number">
+      <a href="#">The price of this <%= product.name %> is:</a>
+      <p>$ <%- product.price %>*</p>
+    </div>
+
+  </div>
+  <h3> *taxes may apply</br>
+      *Amount in Canadian Dollars
+  </h3>
+
+<style>
+ a:hover{
+  color: green;
+ }
+ a{
+   font-size: 30px;
+   font-style: italic;
+ }
+h3{
+  font-size: 15px;
+}
+</style>
+
+<%- include ('../partials/footer') %>
